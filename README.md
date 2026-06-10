@@ -1,75 +1,102 @@
-# React + TypeScript + Vite
+# Capsule Arena - Dragon Ball Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page moderna inspirada en Dragon Ball, construida con React, TypeScript, Vite, Tailwind CSS, Shadcn/UI y Framer Motion.
 
-Currently, two official plugins are available:
+El proyecto presenta una homepage premium, responsive y con modo claro/oscuro. Incluye hero section, tarjetas interactivas, estadisticas, tabs, ranking, testimonios, FAQ, CTA final y componentes reutilizables.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias
 
-## React Compiler
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Shadcn/UI
+- Radix UI
+- Framer Motion
+- Lucide React
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Instalacion
 
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Ejecucion
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## Build de produccion
+
+```bash
+npm run build
+```
+
+## Vista previa del build
+
+```bash
+npm run preview
+```
+
+## Estructura principal
+
+```txt
+src/
+  components/
+    home/
+    ui/
+  data/
+  lib/
+  App.tsx
+  main.tsx
+```
+
+## Capturas del proceso
+
+### 1. Instalacion de Vite y ejecucion
+
+![Instalacion de Vite y ejecucion](docs/01-instalcion-vide-y-ejecucion.png)
+
+### 2. Limpieza inicial y ejecucion
+
+![Limpieza inicial y ejecucion](docs/02-limpiesa-y-ejcucion.png)
+
+### 3. Instalacion de Tailwind CSS
+
+![Instalacion de Tailwind CSS](docs/03-intall.talwin.png)
+
+### 4. Instalacion de Shadcn/UI
+
+![Instalacion de Shadcn UI](docs/04-intall-shadcn.png)
+
+### 5. Primera landing page
+
+![Primera landing page](docs/05-lagin-pague.png)
+
+### 6. Refactor final
+
+![Refactor final](docs/06-refactori.png)
+
+## Funcionalidades
+
+- Landing page responsive para movil, tablet y escritorio.
+- Componentes separados por responsabilidad.
+- Modo claro y oscuro persistente.
+- Animaciones suaves con Framer Motion.
+- Navegacion responsive con menu lateral.
+- Formulario CTA funcional con feedback visual.
+- SEO basico configurado en `index.html`.
+
+## Scripts disponibles
+
+```bash
+npm run dev
+npm run build
+npm run preview
+npm run lint
+```
+
+## Autor
+
+Proyecto desarrollado como practica de React, TypeScript, Tailwind CSS y Shadcn/UI.
