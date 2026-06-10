@@ -1,3 +1,4 @@
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
@@ -9,6 +10,11 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    babel({ presets: [reactCompilerPreset()] })
+    babel({ presets: [reactCompilerPreset()] }),
   ],
+  resolve: {
+    alias: {
+     '@': path.resolve(process.cwd(), 'src')
+    },
+  },
 })
